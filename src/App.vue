@@ -1,4 +1,8 @@
 <template>
+
+  <!-- testing 1 -->
+  <h1> Hello vue.js </h1>
+  
   <!-- Navbar section -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
