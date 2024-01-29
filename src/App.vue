@@ -1,8 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <!-- Navbar section -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -28,9 +23,16 @@ import HelloWorld from './components/HelloWorld.vue'
         </ul>
       </div>
     </div>
-</nav>
+  </nav>
 
 </template>
+
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
+</script>
+
+
 
 <!-- <template>
   <header>
