@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import MovieView from '../App.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createRouterHome(  import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
