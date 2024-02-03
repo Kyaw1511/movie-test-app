@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+
 import App from './App.vue'
 
 import { createRouter, createWebHistory } from "vue-router";
@@ -22,7 +23,7 @@ const routes = [
 // step 3
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
 })
 
 

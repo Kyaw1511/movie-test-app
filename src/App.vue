@@ -13,14 +13,15 @@
                     class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="">About</a>
+                            <router-link 
+                                to="/about"
+                                class="nav-link">About
+                            </router-link>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <router-view></router-view>
   
         <header class="border">
             <img 
@@ -28,6 +29,7 @@
             src="/images/wonderWoman3.jpg" alt="">
         </header>
 
+        <router-view></router-view>
         
     </div>
 
