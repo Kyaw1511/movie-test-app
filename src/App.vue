@@ -38,6 +38,53 @@
 </template>
   
     <script setup>
+        import { provide, ref } from 'vue'
+
+        const movies = ref([
+            {
+                id: 1,
+                title: 'Super Man',
+                imageSrc: '/images/superman.jpg'
+            },
+            {
+                id: 2,
+                title: 'Spider Man',
+                imageSrc: 'images/spiderman.jpg'
+            },
+            {
+                id: 3,
+                title: 'Fast and Furious 9',
+                imageSrc: 'images/fastFurious.jpg'
+            },
+            {
+                id: 4,
+                title: 'Toy Story 4',
+                imageSrc: 'images/toyStory.jpg'
+            },
+            {
+                id: 5,
+                title: 'Forza Gaming',
+                imageSrc: 'images/forza.jpeg'
+            },
+            {
+                id: 6,
+                title: 'Wonder Woman',
+                imageSrc: 'images/wonderWoman.jpg'
+            },
+            {
+                id: 7,
+                title: 'Mario',
+                imageSrc: 'images/mario.jpg'
+            },
+            {
+                id: 8,
+                title: 'Secret Space',
+                imageSrc: 'images/secret.jpg'
+            },
+        ])
+
+        provide('movies', movies)
+
     </script>
   
     <style scoped>
