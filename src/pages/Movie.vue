@@ -1,10 +1,10 @@
 <template>
     <div 
         class="container-fluid my-3 py-3" id="moviePage">
-        <div class="row" :key="movie.id">
+        <div class="row" >
             <div class="col-md-6">
-                <img 
-                    :src="movie.imageSrc" alt="">
+                <img :src="movie.imageSrc" alt="">
+                
             </div>
             <div class="col-md-6 my-auto ">
                 <h4>{{ movie.title }}</h4>
@@ -29,16 +29,17 @@
     const movies = inject('movies')
 
     const movie = computed(() => {
-        return movies.value.find((movie) => {
+        return movies.value.find(movie => {
             return movie.id === movieId
         })
     })
+    
 
 </script>
 
 <style scoped>
     #moviePage img{
-        /* border: 2px solid green; */
+        border: 2px solid green;
         width: 100%;
     }
     #moviePage p {
