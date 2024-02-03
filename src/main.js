@@ -11,11 +11,11 @@ const About = () => import('./pages/About.vue')
 // step 2
 const routes = [
     {
-        path: '/', 
+        path: '/movie-test-app', 
         component: Home
     },
     {
-        path: '/about',
+        path: '/movie-test-app/about',
         component: About
     }
 ]
