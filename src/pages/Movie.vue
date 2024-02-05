@@ -2,8 +2,9 @@
     <div 
         class="container-fluid my-3 py-3" id="moviePage">
         <div class="row" >
-            <div class="col-md-6">
-                <img :src="movie.imageSrc" alt="">
+            <div
+                class="col-md-6">
+                <img :src="image.imageSrc" alt="">
                 
             </div>
             <div class="col-md-6 my-auto ">
@@ -26,7 +27,7 @@
     const route = useRoute()
 
     const movieId = parseInt(route.params.id)
-    const movies = inject('movies')
+    const movies = inject('`/.movies`')
 
     const movie = computed(() => {
         return movies.value.find(movie => {
