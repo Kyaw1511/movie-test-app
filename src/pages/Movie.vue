@@ -4,7 +4,8 @@
         <div class="row" >
             <div
                 class="col-md-6">
-                <img :src="image.imageSrc" alt="">
+                <!-- <img :src="require(movie.imageSrc)" alt=""> -->
+                <img :src="`./.${movie.imageSrc}`" alt="">
                 
             </div>
             <div class="col-md-6 my-auto ">
@@ -27,7 +28,7 @@
     const route = useRoute()
 
     const movieId = parseInt(route.params.id)
-    const movies = inject('`/.movies`')
+    const movies = inject('movies')
 
     const movie = computed(() => {
         return movies.value.find(movie => {

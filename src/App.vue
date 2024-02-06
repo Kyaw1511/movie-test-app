@@ -79,7 +79,7 @@
             {
                 id: 8,
                 title: 'Secret Space',
-                imageSrc: 'images/8.jpg'
+                imageSrc: 
             },
         ])
 
