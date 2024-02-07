@@ -9,8 +9,8 @@
                 <div 
                     class="card card-body p-0 overflow-hidden">
                     <img
-                        class="img-fluid rounded-2" 
-                        :src="movie.imageSrc" alt="">
+                        class="img-fluid rounded-2 py-1" 
+                        :src="`images/${movie.imageSrc}`" alt="">
                     <div class="py-2 text-center">
                         <p class="">
                             {{ movie.title }}

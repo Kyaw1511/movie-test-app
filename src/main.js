@@ -12,7 +12,7 @@ const Movie = () => import('./pages/Movie.vue')
 // step 2
 const routes = [
     {
-        path: '/movie-test-app', 
+        path: '/movie-test-app/', 
         component: Home
     },
     {

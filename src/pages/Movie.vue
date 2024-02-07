@@ -4,8 +4,7 @@
         <div class="row" >
             <div
                 class="col-md-6">
-                <!-- <img :src="require(movie.imageSrc)" alt=""> -->
-                <img :src="`./.${movie.imageSrc}`" alt="">
+                <img :src="`../public/${movie.imageSrc}`"  alt="">
                 
             </div>
             <div class="col-md-6 my-auto ">
@@ -15,7 +14,12 @@
                 </p>
                 <p class="">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim repellat doloremque laboriosam neque velit cupiditate quos porro blanditiis vero, obcaecati dolorum atque dicta quam dolores facere eaque! Tempore, commodi facere sed vitae praesentium quam libero excepturi nemo? Reiciendis fugiat veniam maxime error dolorem voluptates libero, suscipit ducimus! Officiis velit facere vero cupiditate aut explicabo eveniet minima delectus!
-                </p>    
+                </p> 
+                <router-link
+                    to="/movie-test-app/"
+                    class="btn btn-sm btn-primary float-end">
+                    <i class="fa-solid fa-backward"></i>
+                </router-link>   
             </div>
         </div>
     </div>
@@ -41,7 +45,8 @@
 
 <style scoped>
     #moviePage img{
-        border: 2px solid green;
+        /* border: 2px solid green; */
+        border-radius: 16px;
         width: 100%;
     }
     #moviePage p {

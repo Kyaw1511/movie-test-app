@@ -44,42 +44,42 @@
             {
                 id: 1,
                 title: 'Super Man',
-                imageSrc: 'images/10.jpg'
-            },
+                imageSrc: "../public/images/10.jpg"
+            },    
             {
                 id: 2,
                 title: 'Spider Man',
-                imageSrc: 'images/9.jpg'
+                imageSrc: '../public/images/9.jpg'
             },
             {
                 id: 3,
                 title: 'Fast and Furious 9',
-                imageSrc: 'images/3.jpg'
+                imageSrc: '../public/images/3.jpg'
             },
             {
                 id: 4,
                 title: 'Toy Story 4',
-                imageSrc: 'images/11.jpg'
+                imageSrc: '../public/images/11.jpg'
             },
             {
                 id: 5,
                 title: 'Forza Gaming',
-                imageSrc: 'images/4.jpeg'
+                imageSrc: '../public/images/4.jpeg'
             },
             {
                 id: 6,
                 title: 'Wonder Woman',
-                imageSrc: 'images/14.jpg'
+                imageSrc: '../public/images/14.jpg'
             },
             {
                 id: 7,
                 title: 'Mario',
-                imageSrc: 'images/7.jpg'
+                imageSrc: '../public/images/7.jpg'
             },
             {
                 id: 8,
                 title: 'Secret Space',
-                imageSrc: 
+                imageSrc: '../public/images/9.jpg'
             },
         ])
 
