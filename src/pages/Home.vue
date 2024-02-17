@@ -2,7 +2,7 @@
     <header class="border">
         <img 
         class=""
-        src="/images/13.jpg" alt="">
+        src="/images/cover.jpg" alt="">
     </header>
     <!-- <h3>Hello home page</h3> -->
     <div class="container">

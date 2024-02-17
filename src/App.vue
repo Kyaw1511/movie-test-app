@@ -6,7 +6,7 @@
             <div class="container-fluid">
                 <router-link 
                     to="/movie-test-app/"
-                    class="navbar-brand text-primary text-uppercase fw-bolder fs-2">
+                    class="navbar-brand text-info text-uppercase fw-bolder fs-2">
                     Vueflix
                 </router-link>
                 <button 
@@ -19,7 +19,7 @@
                         <li class="nav-item">
                             <router-link 
                                 to="/movie-test-app/about"
-                                class="nav-link text-white text-uppercase fw-bolder fs-4 px-4">
+                                class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
                                 About
                             </router-link>
                         </li>
@@ -66,7 +66,7 @@
             {
                 id: 6,
                 title: 'Wonder Woman',
-                imageSrc: '../public/images/14.jpg'
+                imageSrc: '../public/images/12.jpg'
             },
             {
                 id: 7,
@@ -76,7 +76,27 @@
             {
                 id: 8,
                 title: 'Secret Space',
-                imageSrc: '../public/images/9.jpg'
+                imageSrc: '../public/images/8.jpg'
+            },
+            {
+                id: 9,
+                title: 'Wonder Woman',
+                imageSrc: '../public/images/13.jpg'
+            },
+            {
+                id: 10,
+                title: 'DC movie',
+                imageSrc: '../public/images/14.jpg'
+            },
+            {
+                id: 11,
+                title: 'DC Hero',
+                imageSrc: '../public/images/16.jpg'
+            },
+            {
+                id: 12,
+                title: 'KunFu Panda',
+                imageSrc: '../public/images/15.jpg'
             },
         ])
 
