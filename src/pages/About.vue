@@ -1,6 +1,6 @@
 <template>
-    <div class="container py-2" id="aboutPage">
-        <h3>About</h3>
+    <div class="container pt-5" id="aboutPage">
+        <h3 class="pt-3">About</h3>
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem totam ducimus exercitationem alias numquam sapiente beatae cum, deleniti commodi iusto! Consequatur repellendus pariatur eius neque, vel natus inventore nihil voluptate. Voluptas rem, corrupti ex eum, quas cupiditate accusamus doloremque quam doloribus quod nesciunt maiores debitis necessitatibus nam laborum omnis exercitationem facilis ipsam, dignissimos eligendi? Quisquam totam aperiam facilis tempora dolore, hic exercitationem repellendus dolorum illo ea repudiandae harum. Ratione nihil eius nulla maiores fuga voluptatibus consectetur eum.
         </p>

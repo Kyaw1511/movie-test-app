@@ -1,9 +1,9 @@
 <template>
     <header class="border">
-            <img 
-            class=""
-            src="/images/13.jpg" alt="">
-        </header>
+        <img 
+        class=""
+        src="/images/13.jpg" alt="">
+    </header>
     <!-- <h3>Hello home page</h3> -->
     <div class="container">
         <h3 class="my-3">Top Movies</h3>
