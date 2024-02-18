@@ -14,8 +14,10 @@
                 <div 
                     class="card card-body p-0 overflow-hidden">
                     <img
-                        class="img-fluid rounded-2 py-1" 
-                        :src="`images/${movie.imageSrc}`" alt="">
+                        :src="`images/${movie.imageSrc}`" 
+                        class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
+                        style="height: 200px;"
+                        alt="">
                     <div class="py-2 text-center">
                         <p class="">
                             {{ movie.title }}
@@ -49,5 +51,6 @@
         header img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
         }
 </style>

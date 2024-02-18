@@ -2,6 +2,7 @@
 <template>
     <div class="container-fluid">
         <nav 
+            id="navbar"
             class="navbar navbar-expand-lg bg-transparent position-fixed w-100 rounded-2 px-5">
             <div class="container-fluid">
                 <router-link 
@@ -105,6 +106,11 @@
     </script>
   
     <style scoped>
+        #navbar {
+            border: 2px solid green;
+            z-index: 1;
+            
+        }
         header {
         height: 100vh;
         }
