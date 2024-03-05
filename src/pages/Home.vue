@@ -8,28 +8,31 @@
     <div class="container">
         <h3 class="my-3">Top Movies</h3>
         <div class="row g-4">
-            <div 
-                v-for="movie in movies" :key="movie.id"
-                class="col-md-3 my-3">
-                <div 
-                    class="card card-body p-0 overflow-hidden">
-                    <img
-                        :src="`images/${movie.imageSrc}`" 
-                        class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
-                        style="height: 200px;"
-                        alt="">
-                    <div class="py-2 text-center">
-                        <p class="">
-                            {{ movie.title }}
-                        </p>
-                        <router-link 
-                            :to="`/movie-test-app/movies/${movie.id}`"
-                            class="btn btn-sm btn-info">
-                            Details
-                        </router-link>
+            <template 
+                v-for="movie in movies" :key="movie.id">
+                <div
+                    v-if="movie.isTop" 
+                    class="col-md-3 my-3">
+                    <div 
+                        class="card card-body p-0 overflow-hidden">
+                        <img
+                            :src="`images/${movie.imageSrc}`" 
+                            class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
+                            style="height: 200px;"
+                            alt="">
+                        <div class="py-2 text-center">
+                            <p class="">
+                                {{ movie.title }}
+                            </p>
+                            <router-link 
+                                :to="`/movie-test-app/movies/${movie.id}`"
+                                class="btn btn-sm btn-info">
+                                Details
+                            </router-link>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </template>
             
         </div>
     </div>
