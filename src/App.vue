@@ -107,7 +107,7 @@
   
     <style scoped>
         #navbar {
-            border: 2px solid green;
+            border: 2px solid whitesmoke;
             z-index: 1;
             
         }
