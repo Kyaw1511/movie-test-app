@@ -8,18 +8,34 @@
                 
             </div>
             <div class="col-md-6 my-auto ">
-                <h4>{{ movie.title }}</h4>
-                <p class="">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias aliquid dolores aut nisi odit, sapiente, maiores excepturi ipsam animi perferendis est. Quasi ipsam fugit reiciendis voluptate mollitia illum nesciunt totam veniam at consequuntur rem voluptatum beatae cupiditate, vero, pariatur quis corrupti suscipit laboriosam similique repellat. Rem, hic. Totam soluta impedit obcaecati rerum reprehenderit, doloremque et voluptatem fugiat magni repellendus molestias quae suscipit reiciendis doloribus magnam vel culpa non illo quas labore. Rem fuga corporis dolorum suscipit recusandae.
-                </p>
-                <p class="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim repellat doloremque laboriosam neque velit cupiditate quos porro blanditiis vero, obcaecati dolorum atque dicta quam dolores facere eaque! Tempore, commodi facere sed vitae praesentium quam libero excepturi nemo? Reiciendis fugiat veniam maxime error dolorem voluptates libero, suscipit ducimus! Officiis velit facere vero cupiditate aut explicabo eveniet minima delectus!
-                </p> 
-                <router-link
-                    to="/movie-test-app/"
-                    class="btn btn-sm btn-primary float-end">
-                    <i class="fa-solid fa-backward"></i>
-                </router-link>   
+                <div
+                    class="d-flex justify-content-between">
+                    <h4>{{ movie.title }}</h4>
+                    <router-link
+                        to="/movie-test-app/"
+                        class="btn btn-sm btn-primary">
+                        <i class="fa-solid fa-backward"></i>
+                    </router-link>   
+                </div>
+                
+                <div>
+                    <router-link
+                        :to="`/movie-test-app/movies/${movie.id}`"
+                        class="btn btn-lg border border-info m-1 rounded">
+                        Overview
+                    </router-link>
+                    <router-link
+                        :to="`/movie-test-app/movies/${movie.id}/trailer`"
+                        class="btn btn-lg border border-info m-1 rounded">
+                        Trailer
+                    </router-link>
+                    <router-link
+                    :to="`/movie-test-app/movies/${movie.id}/artists`"
+                        class="btn btn-lg border border-info m-1 rounded">
+                        Artists
+                    </router-link>
+                </div>
+                <router-view class="mt-2"></router-view>
             </div>
         </div>
     </div>
