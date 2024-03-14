@@ -6,7 +6,7 @@
             class="navbar navbar-expand-lg bg-transparent position-fixed w-100 rounded-2 px-5">
             <div class="container-fluid">
                 <router-link 
-                    to="/movie-test-app/"
+                    :to="{name: 'home'}"
                     class="navbar-brand text-info text-uppercase fw-bolder fs-2">
                     Vueflix
                 </router-link>
@@ -18,15 +18,15 @@
                     class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <router-link 
-                                to="/movie-test-app/movies"
+                            <router-link    
+                                :to="{name: 'movies'}"
                                 class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
                                 Movies
                             </router-link>
                         </li>
                         <li class="nav-item">
                             <router-link 
-                                to="/movie-test-app/about"
+                                :to="{name: 'about'}"
                                 class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
                                 About
                             </router-link>

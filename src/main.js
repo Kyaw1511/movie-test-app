@@ -17,14 +17,17 @@ const MovieArtist =()=> import('./pages/MovieArtists.vue')
 const routes = [
     {
         path: '/movie-test-app/', 
+        name: 'home',
         component: Home
     },
     {
         path: '/movie-test-app/about',
+        name: 'about',
         component: About
     },
     {
-        path: '/movie-test-app/movies/',
+        path: '/movie-test-app/movies',
+        name: 'movies',
         component: Movies
     },
     {
@@ -33,14 +36,17 @@ const routes = [
         children: [
             {
                 path: '',
+                name:'movieOverview',
                 component: MovieOverview,
             },
             {
                 path: 'trailer',
+                name:'movieTrailer',
                 component: MovieTrailer,
             },
             {
                 path: 'artists',
+                name:'movieArtist',
                 component: MovieArtist,
             }
         ]

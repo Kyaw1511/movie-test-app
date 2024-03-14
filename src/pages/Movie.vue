@@ -12,7 +12,7 @@
                     class="d-flex justify-content-between">
                     <h4>{{ movie.title }}</h4>
                     <router-link
-                        to="/movie-test-app/"
+                        :to="{name: 'home'}"
                         class="btn btn-sm btn-primary">
                         <i class="fa-solid fa-backward"></i>
                     </router-link>   
@@ -20,17 +20,17 @@
                 
                 <div>
                     <router-link
-                        :to="`/movie-test-app/movies/${movie.id}`"
+                        :to="{name: 'movieOverview'}"
                         class="btn btn-lg border border-info m-1 rounded">
                         Overview
                     </router-link>
                     <router-link
-                        :to="`/movie-test-app/movies/${movie.id}/trailer`"
+                        :to="{name: 'movieTrailer'}"
                         class="btn btn-lg border border-info m-1 rounded">
                         Trailer
                     </router-link>
                     <router-link
-                    :to="`/movie-test-app/movies/${movie.id}/artists`"
+                    :to="{name: 'movieArtists'}"
                         class="btn btn-lg border border-info m-1 rounded">
                         Artists
                     </router-link>
@@ -44,6 +44,7 @@
 <script setup>
     import { useRoute } from 'vue-router'
     import { ref, inject, computed } from 'vue';
+import MovieOverview from './MovieOverview.vue';
 
     const route = useRoute()
 
