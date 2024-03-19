@@ -11,7 +11,7 @@ const Movies = () => import('./pages/Movies.vue')
 const Movie = () => import('./pages/Movie.vue')
 const MovieOverview = () => import('./pages/MovieOverview.vue')
 const MovieTrailer = () => import('./pages/MovieTrailer.vue')
-const MovieArtist = ()=> import('./pages/MovieArtists.vue')
+const MovieArtists = () => import('./pages/MovieArtists.vue')
 
 // step 2
 const routes = [
@@ -47,8 +47,8 @@ const routes = [
             },
             {
                 path: 'artists',
-                name:'movieArtist',
-                component: MovieArtist,
+                name:'movieArtists',
+                component: MovieArtists,
             }
         ]
     },

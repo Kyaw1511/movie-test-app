@@ -30,7 +30,7 @@
                         Trailer
                     </router-link>
                     <router-link
-                    :to="{name: 'movieArtist'}"
+                    :to="{name: 'movieArtists'}"
                         class="btn btn-lg border border-info m-1 rounded">
                         Artists
                     </router-link>

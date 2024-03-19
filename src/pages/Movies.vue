@@ -16,6 +16,8 @@
                         class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
                         style="height: 200px;"
                         alt="">
+                    <!-- <img 
+                        :src="`../images/${movie.imageSrc}`" alt="">     -->
                     <div class="py-2 text-center">
                         <p class="">
                             {{ movie.title }}
@@ -27,15 +29,15 @@
                         </router-link>
 
                         <router-link
-                            :to="{name: 'movieTrailer', params: {id: movie.id} }"
+                            :to="{name: 'movieArtists', params: {id: movie.id} }"
                             class="btn btn-sm btn-warning mx-1">
-                            Trailer
+                            Artists
                         </router-link>
 
                         <router-link
-                            :to="{name: 'movieArtist', params: {id: movie.id} }"
+                            :to="`/movie-test-app/movies/${movie.id}/movieOverview`"
                             class="btn btn-sm btn-warning mx-1">
-                            Artists
+                            test
                         </router-link>
                     </div>
                 </div>
