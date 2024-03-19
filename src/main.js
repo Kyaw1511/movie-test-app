@@ -9,9 +9,9 @@ const Home = () => import('./pages/Home.vue')
 const About = () => import('./pages/About.vue')
 const Movies = () => import('./pages/Movies.vue')
 const Movie = () => import('./pages/Movie.vue')
-const MovieOverview =() => import('./pages/MovieOverview.vue')
-const MovieTrailer =() => import('./pages/MovieTrailer.vue')
-const MovieArtist =()=> import('./pages/MovieArtists.vue')
+const MovieOverview = () => import('./pages/MovieOverview.vue')
+const MovieTrailer = () => import('./pages/MovieTrailer.vue')
+const MovieArtist = ()=> import('./pages/MovieArtists.vue')
 
 // step 2
 const routes = [
@@ -32,6 +32,7 @@ const routes = [
     },
     {
         path: '/movie-test-app/movies/:id',
+        name: 'movie',
         component: Movie,
         children: [
             {

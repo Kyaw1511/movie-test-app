@@ -25,6 +25,18 @@
                             class="btn btn-sm btn-info">
                             Details
                         </router-link>
+
+                        <router-link
+                            :to="{name: 'movieTrailer', params: {id: movie.id} }"
+                            class="btn btn-sm btn-warning mx-1">
+                            Trailer
+                        </router-link>
+
+                        <router-link
+                            :to="{name: 'movieArtist', params: {id: movie.id} }"
+                            class="btn btn-sm btn-warning mx-1">
+                            Artists
+                        </router-link>
                     </div>
                 </div>
             </div>
