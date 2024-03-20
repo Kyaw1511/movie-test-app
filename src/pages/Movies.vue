@@ -29,16 +29,13 @@
                         </router-link>
 
                         <router-link
-                            :to="{name: 'movieArtists', params: {id: movie.id} }"
+                            :to="{
+                                name: 'movieArtists',
+                                params: {id: movie.id} }"
                             class="btn btn-sm btn-warning mx-1">
                             Artists
                         </router-link>
 
-                        <router-link
-                            :to="`/movie-test-app/movies/${movie.id}/movieOverview`"
-                            class="btn btn-sm btn-warning mx-1">
-                            test
-                        </router-link>
                     </div>
                 </div>
             </div>

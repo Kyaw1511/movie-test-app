@@ -3,6 +3,7 @@ import { createApp } from "vue";
 import App from './App.vue'
 
 import { createRouter, createWebHistory } from "vue-router";
+import MovieArtists from "./pages/MovieArtists.vue";
 
 // step 1
 const Home = () => import('./pages/Home.vue')
@@ -11,7 +12,7 @@ const Movies = () => import('./pages/Movies.vue')
 const Movie = () => import('./pages/Movie.vue')
 const MovieOverview = () => import('./pages/MovieOverview.vue')
 const MovieTrailer = () => import('./pages/MovieTrailer.vue')
-const MovieArtists = () => import('./pages/MovieArtists.vue')
+const MovieArtist = () => import('./pages/MovieArtists.vue')
 
 // step 2
 const routes = [
@@ -48,7 +49,7 @@ const routes = [
             {
                 path: 'artists',
                 name:'movieArtists',
-                component: MovieArtists,
+                component: MovieArtist,
             }
         ]
     },
@@ -65,3 +66,4 @@ const app = createApp(App)
 // step 4
 app.use(router)
 app.mount('#app')
+
