@@ -30,7 +30,15 @@
 
                         <router-link
                             :to="{
-                                name: 'movieArtists',
+                                name: 'movieOverview',
+                                params: {id: movie.id} }"
+                            class="btn btn-sm btn-warning mx-1">
+                            test
+                        </router-link>
+
+                        <router-link
+                            :to="{
+                                name: 'movieTrailer',
                                 params: {id: movie.id} }"
                             class="btn btn-sm btn-warning mx-1">
                             Artists
