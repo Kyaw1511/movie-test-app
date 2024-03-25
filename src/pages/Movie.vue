@@ -20,17 +20,20 @@
                 
                 <div>
                     <router-link
-                        :to="{name: 'movieOverview'}"
+                        :to="{
+                            name: 'movieOverview'}"
                         class="btn btn-lg border border-info m-1 rounded">
                         Overview
                     </router-link>
                     <router-link
-                        :to="{name: 'movieTrailer'}"
+                        :to="{
+                            name: 'movieTrailer', params: {id: movie.id} }"
                         class="btn btn-lg border border-info m-1 rounded">
                         Trailer
                     </router-link>
                     <router-link
-                    :to="{name: 'movieArtists'}"
+                        :to="{
+                            name: 'movieArtists', params: {id: movie.id} }"
                         class="btn btn-lg border border-info m-1 rounded">
                         Artists
                     </router-link>

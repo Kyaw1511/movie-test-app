@@ -43,12 +43,12 @@ const routes = [
             },
             {
                 path: 'trailer',
-                name:'movieTrailer',
+                name: 'movieTrailer',
                 component: MovieTrailer,
             },
             {
                 path: 'artists',
-                name:'movieArtists',
+                name: 'movieArtists',
                 component: MovieArtist,
             }
         ]
