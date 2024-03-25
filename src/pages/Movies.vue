@@ -37,9 +37,7 @@
                         </router-link>
 
                         <router-link
-                            :to="{
-                                name: 'movieTrailer',
-                                params: {id: movie.id} }"
+                            :to="`/movie-test-app/movies/${movie.id}/trailer`"
                             class="btn btn-sm btn-warning mx-1">
                             Artists
                         </router-link>
