@@ -34,7 +34,6 @@ const routes = [
     {
         path: '/movie-test-app/movies/:id',
         name: 'movie',
-        redirect: '/movie-test-app/movies/:id',
         component: Movie,
         children: [
             {

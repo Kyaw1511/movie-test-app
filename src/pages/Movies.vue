@@ -12,7 +12,7 @@
                 <div 
                     class="card card-body p-0 overflow-hidden">
                     <img
-                        :src="`images/${movie.imageSrc}`" 
+                        :src="`images/${movie.imageSrc}`"
                         class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
                         style="height: 200px;"
                         alt="">
@@ -33,20 +33,20 @@
                             Details
                         </button>
 
-                        <button 
+                        <!-- <button 
                             @click="goToArtist(movie.id)"
                             class="btn btn-sm btn-primary mx-2">
                             Artists
-                        </button>
+                        </button> -->
 
-                        <!-- <router-link
+                        <router-link
                             :to="{
                                 name: 'movieArtists',
                                 params: {id: movie.id}
                             }"
                             class="btn btn-sm btn-warning mx-1">
                             Artists
-                        </router-link> -->
+                        </router-link>
 
                     </div>
                 </div>
@@ -67,14 +67,15 @@
     const goToDetail = (id) => {
         router.push(`/movie-test-app/movies/${id}`)
     }
-    const goToArtist = (id) => {
-        router.push(
-            {
-                name: 'movieArtists',
-                params: {id:id}
-            }
-        )
-    }
+    // const goToArtist = (id) => {
+    //      router.push(
+    //          {
+    //             name: 'movieArtists',
+    //             params: {id:id}
+    //          }
+    //      )
+    // }
+    
 </script>
 
 <style scoped>

@@ -49,7 +49,7 @@
             {
                 id: 1,
                 title: 'Super Man',
-                imageSrc: "../images/10.jpg",
+                imageSrc: '../images/10.jpg',
                 isTop: true,
             },    
             {
