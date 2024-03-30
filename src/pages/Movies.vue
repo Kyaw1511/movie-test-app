@@ -22,28 +22,31 @@
                         <p class="">
                             {{ movie.title }}
                         </p>
-                        <router-link 
+                        <!-- <router-link 
                             :to="`/movie-test-app/movies/${movie.id}`"
                             class="btn btn-sm btn-info">
                             Details
-                        </router-link>
+                        </router-link> -->
+                        <button 
+                            @click="goToDetail(movie.id)"
+                            class="btn btn-sm btn-info">
+                            Details
+                        </button>
 
-                        <router-link
-                            :to="{
-                                name: 'movieOverview',
-                                params: {id: movie.id} }"
-                            class="btn btn-sm btn-warning mx-1">
-                            test
-                        </router-link>
+                        <button 
+                            @click="goToArtist(movie.id)"
+                            class="btn btn-sm btn-primary mx-2">
+                            Artists
+                        </button>
 
-                        <router-link
+                        <!-- <router-link
                             :to="{
                                 name: 'movieArtists',
                                 params: {id: movie.id}
                             }"
                             class="btn btn-sm btn-warning mx-1">
                             Artists
-                        </router-link>
+                        </router-link> -->
 
                     </div>
                 </div>
@@ -55,8 +58,23 @@
 
 <script setup>
     import { ref, inject } from 'vue';
+    import { useRouter } from 'vue-router';
+
+    const router = useRouter()
 
     const movies = inject('movies')
+
+    const goToDetail = (id) => {
+        router.push(`/movie-test-app/movies/${id}`)
+    }
+    const goToArtist = (id) => {
+        router.push(
+            {
+                name: 'movieArtists',
+                params: {id:id}
+            }
+        )
+    }
 </script>
 
 <style scoped>
