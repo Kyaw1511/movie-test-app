@@ -4,19 +4,21 @@
         <div class="row" >
             <div
                 class="col-md-6">
+                <!-- <img 
+                    :src="`../public/${movie.imageSrc}`"  alt=""> -->
                 <img 
-                    :src="`../public/${movie.imageSrc}`"  alt="">
+                    :src="movie.imageSrc" alt="happy">
                 
             </div>
             <div class="col-md-6 my-auto ">
                 <div
                     class="d-flex justify-content-between">
                     <h4>{{ movie.title }}</h4>
-                    <router-link
-                        :to="{name: 'home'}"
-                        class="btn btn-sm btn-primary">
-                        <i class="fa-solid fa-backward"></i>
-                    </router-link>   
+                    <button
+                        @click="goBack"
+                        class="btn btn-primary">
+                        Back
+                    </button>
                 </div>
                 
                 <div>
@@ -46,11 +48,11 @@
 </template>  
 
 <script setup>
-    import { useRoute } from 'vue-router'
+    import { useRoute, useRouter } from 'vue-router'
     import { ref, inject, computed } from 'vue';
-import MovieOverview from './MovieOverview.vue';
 
     const route = useRoute()
+    const router = useRouter()
 
     const movieId = parseInt(route.params.id)
     const movies = inject('movies')
@@ -60,6 +62,10 @@ import MovieOverview from './MovieOverview.vue';
             return movie.id === movieId
         })
     })
+
+    const goBack = () => {
+        router.go(-1)
+    }
     
 
 </script>
@@ -73,5 +79,8 @@ import MovieOverview from './MovieOverview.vue';
     #moviePage p {
         text-indent: 50px;
         text-align: justify;
+    }
+    #moviePage {
+        min-height: 85vh;
     }
 </style>

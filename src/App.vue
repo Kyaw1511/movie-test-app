@@ -1,49 +1,60 @@
 
 <template>
-    <div class="container-fluid">
-        <nav 
-            id="navbar"
-            class="navbar navbar-expand-lg bg-transparent position-fixed w-100 rounded-2 px-5">
-            <div class="container-fluid">
-                <router-link 
-                    :to="{name: 'home'}"
-                    class="navbar-brand text-info text-uppercase fw-bolder fs-2">
-                    Vueflix
-                </router-link>
-                <button 
-                    class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon navbar-toggler-white"></span>
-                </button>
-                <div 
-                    class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <router-link    
-                                :to="{name: 'movies'}"
-                                class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
-                                Movies
-                            </router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link 
-                                :to="{name: 'about'}"
-                                class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
-                                About
-                            </router-link>
-                        </li>
-                    </ul>
+    <main>
+        <div class="container-fluid">
+            <nav 
+                id="navbar"
+                class="navbar navbar-expand-lg bg-transparent position-fixed w-100 rounded-2 px-5">
+                <div class="container-fluid">
+                    <router-link 
+                        :to="{name: 'home'}"
+                        class="navbar-brand text-info text-uppercase fw-bolder fs-2">
+                        Vueflix
+                    </router-link>
+                    <button 
+                        class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon navbar-toggler-white"></span>
+                    </button>
+                    <div 
+                        class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <router-link    
+                                    :to="{name: 'movies'}"
+                                    class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
+                                    Movies
+                                </router-link>
+                            </li>
+                            <li class="nav-item">
+                                <router-link 
+                                    :to="{name: 'about'}"
+                                    class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
+                                    About
+                                </router-link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <router-view></router-view>
-    </div>
+            <router-view></router-view>
 
+            <footer
+                class="p-3">
+                <p
+                    class="text-center text-primary">
+                    &copy; All right reserved by KMT
+                </p>
+            </footer>
+
+        </div>
+
+    </main>
 
 </template>
   
     <script setup>
-        import { provide, ref } from 'vue'
+        import { ref, provide } from 'vue'
 
         const movies = ref([
             {
@@ -125,6 +136,7 @@
     </script>
   
     <style scoped>
+        
         #navbar {
             border: 2px solid whitesmoke;
             z-index: 1;

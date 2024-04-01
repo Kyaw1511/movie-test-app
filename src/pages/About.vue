@@ -25,4 +25,8 @@
         text-indent: 50px;
         text-align: justify;
     }
+    #aboutPage {
+        /* border: 2px solid green; */
+        min-height: 89vh;
+    }
 </style>

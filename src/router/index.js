@@ -1,25 +1,59 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
+// step 1
+const Home = () => import('./../pages/Home.vue')
+const About = () => import('./../pages/About.vue')
+const Movies = () => import('./../pages/Movies.vue')
+const Movie = () => import('./../pages/Movie.vue')
+const MovieOverview = () => import('./../pages/MovieOverview.vue')
+const MovieTrailer = () => import('./../pages/MovieTrailer.vue')
+const MovieArtist = () => import('./../pages/MovieArtists.vue')
+
+// step 2
+const routes = [
+  {
+      path: '/movie-test-app/', 
       name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
+      component: Home
+  },
+  {
+      path: '/movie-test-app/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
+      component: About
+  },
+  {
+      path: '/movie-test-app/movies',
+      name: 'movies',
+      component: Movies
+  },
+  {
+      path: '/movie-test-app/movies/:id',
+      name: 'movie',
+      component: Movie,
+      children: [
+          {
+              path: '',
+              name:'movieOverview',
+              component: MovieOverview,
+          },
+          {
+              path: 'trailer',
+              name: 'movieTrailer',
+              component: MovieTrailer,
+          },
+          {
+              path: 'artists',
+              name: 'movieArtists',
+              component: MovieArtist,
+          }
+      ]
+  },
+]
+
+// step 3
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
 })
 
 export default router
-
-

@@ -15,7 +15,7 @@
                         :src="`images/${movie.imageSrc}`"
                         class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
                         style="height: 200px;"
-                        alt="">
+                        alt="unkown 1">
                     <!-- <img 
                         :src="`../images/${movie.imageSrc}`" alt="">     -->
                     <div class="py-2 text-center">
@@ -79,5 +79,5 @@
 </script>
 
 <style scoped>
-
+    
 </style>
