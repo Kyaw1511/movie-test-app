@@ -12,26 +12,34 @@
                 <div 
                     class="card card-body p-0 overflow-hidden">
                     <img
-                        :src="`images/${movie.imageSrc}`"
+                        :src="`./images/${movie.imageSrc}`"
                         class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
                         style="height: 200px;"
                         alt="unkown 1">
                     <!-- <img 
                         :src="`../images/${movie.imageSrc}`" alt="">     -->
                     <div class="py-2 text-center">
-                        <p class="">
+                        <p class="fw-bold fs-4">
                             {{ movie.title }}
                         </p>
+                        <router-link 
+                            :to="`../movie-test-app/movies/${movie.id}/`"
+                            class="btn btn-sm btn-info">
+                            Details
+                        </router-link>
                         <!-- <router-link 
-                            :to="`/movie-test-app/movies/${movie.id}`"
+                            :to="{
+                                name: 'movieOverview',
+                                params: {id: movie.id}
+                            }"
                             class="btn btn-sm btn-info">
                             Details
                         </router-link> -->
-                        <button 
+                        <!-- <button 
                             @click="goToDetail(movie.id)"
                             class="btn btn-sm btn-info">
                             Details
-                        </button>
+                        </button> -->
 
                         <!-- <button 
                             @click="goToArtist(movie.id)"

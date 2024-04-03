@@ -19,13 +19,13 @@
                             :src="`images/${movie.imageSrc}`" 
                             class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
                             style="height: 200px;"
-                            alt="">
+                            alt="test7">
                         <div class="py-2 text-center">
-                            <p class="">
+                            <p class="fw-bold fs-4">
                                 {{ movie.title }}
                             </p>
                             <router-link 
-                                :to="`/movie-test-app/movies/${movie.id}`"
+                                :to="`/movie-test-app/movies/${movie.id}/`"
                                 class="btn btn-sm btn-info">
                                 Details
                             </router-link>

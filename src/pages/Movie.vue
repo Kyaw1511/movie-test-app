@@ -5,9 +5,13 @@
             <div
                 class="col-md-6">
                 <!-- <img 
-                    :src="`../public/${movie.imageSrc}`"  alt=""> -->
+                    :src="`../public/images/${movie.imageSrc}`"  alt=""> -->
+                <!-- <img 
+                    :src="movie.imageSrc" alt="test3"> -->
                 <img 
-                    :src="movie.imageSrc" alt="happy">
+                    :src="`../${movie.imageSrc}`" alt="test6">
+                <!-- <img 
+                    :src="movie.imageSrc" alt="test4"> -->
                 
             </div>
             <div class="col-md-6 my-auto ">
@@ -24,7 +28,7 @@
                 <div>
                     <router-link
                         :to="{
-                            name: 'movieOverview'}"
+                            name: 'movieOverview', params: {id: movie.id}}"
                         class="btn btn-lg border border-info m-1 rounded">
                         Overview
                     </router-link>
