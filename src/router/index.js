@@ -30,9 +30,10 @@ const routes = [
       path: '/movie-test-app/movies/:id',
       name: 'movie',
       component: Movie,
+      redirect: { name: "movieOverview"},
       children: [
           {
-              path: '',
+              path: 'overview',
               name:'movieOverview',
               component: MovieOverview,
           },

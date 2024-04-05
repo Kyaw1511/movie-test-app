@@ -61,9 +61,9 @@
                         </div>
                         <div class="my-2">
                             <router-link 
-                            :to="`/movie-test-app/movies/${movie.id}/`"
-                            class="btn btn-sm btn-danger rounded-pill">
-                            Details
+                                :to="`/movie-test-app/movies/${movie.id}/`"
+                                class="btn btn-sm btn-danger rounded-pill">
+                                Details
                             </router-link>
                             <router-link
                                 :to="{
