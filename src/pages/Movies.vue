@@ -70,7 +70,7 @@
                                     name: 'movieArtists',
                                     params: {id: movie.id}
                                 }"
-                                class="btn btn-sm btn-warning mx-1">
+                                class="btn btn-sm btn-warning rounded-pill mx-2">
                                 Artists
                             </router-link>
 

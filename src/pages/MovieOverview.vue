@@ -1,11 +1,15 @@
 <template>
-    <div>
+    <div class="m-2">
         <h4>
             movie overview
         </h4>
-        <p class="mt-2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur molestiae explicabo, cum dignissimos modi voluptatum enim doloremque ratione sequi iure animi eveniet ab nobis eligendi voluptatibus. Voluptatum, deleniti praesentium. Error, rem. Optio itaque maxime deserunt dolorum sed voluptate, quaerat a accusantium eum assumenda rem? Sit recusandae pariatur, debitis beatae expedita iure ab perferendis vero voluptatem!
+        <p class="">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima inventore dicta fugiat asperiores eos tempora quisquam est laborum at, debitis dolores deserunt cum consequuntur doloribus vero dolorum sint, nemo quaerat voluptatum et, expedita nisi! Nulla, tenetur!
         </p>
+        <p class="">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima inventore dicta fugiat asperiores eos tempora quisquam est laborum at, debitis dolores deserunt cum consequuntur doloribus vero dolorum sint, nemo quaerat voluptatum et, expedita nisi! Nulla, tenetur!
+        </p>
+
     </div>
 </template>
 
@@ -13,6 +17,17 @@
 
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+    div > h4 {
+        margin: 16px auto;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+    }
+    div > p {
+        text-indent: 40px;
+        letter-spacing: 1px;
+        text-align: justify;
+ }
 </style>

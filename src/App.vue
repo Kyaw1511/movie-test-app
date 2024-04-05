@@ -4,11 +4,11 @@
         <div class="container-fluid">
             <nav 
                 id="navbar"
-                class="navbar navbar-expand-lg bg-transparent position-fixed w-100 rounded-2 px-5">
+                class="navbar navbar-expand-lg bg-transparent position-fixed w-100 rounded-2 ">
                 <div class="container-fluid">
                     <router-link 
                         :to="{name: 'home'}"
-                        class="navbar-brand text-info text-uppercase fw-bolder fs-2">
+                        class="navbar-brand text-info text-uppercase fw-bolder fs-3">
                         Vueflix
                     </router-link>
                     <button 
