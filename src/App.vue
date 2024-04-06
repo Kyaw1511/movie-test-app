@@ -4,11 +4,12 @@
         <div class="container-fluid">
             <nav 
                 id="navbar"
-                class="navbar navbar-expand-lg bg-transparent position-fixed w-100 rounded-2 ">
+                class="navbar navbar-expand-lg position-fixed w-100 rounded-2"
+                :class="navBgColor">
                 <div class="container-fluid">
                     <router-link 
                         :to="{name: 'home'}"
-                        class="navbar-brand text-info text-uppercase fw-bolder fs-3">
+                        class="navbar-brand text-info text-uppercase fw-bold fs-4">
                         Vueflix
                     </router-link>
                     <button 
@@ -21,14 +22,14 @@
                             <li class="nav-item">
                                 <router-link    
                                     :to="{name: 'movies'}"
-                                    class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
+                                    class="nav-link text-info text-uppercase fw-bold fs-4 px-4">
                                     Movies
                                 </router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link 
                                     :to="{name: 'about'}"
-                                    class="nav-link text-info text-uppercase fw-bolder fs-4 px-4">
+                                    class="nav-link text-info text-uppercase fw-bold fs-4 px-4">
                                     About
                                 </router-link>
                             </li>
@@ -54,96 +55,18 @@
 </template>
   
     <script setup>
-        import { ref, provide } from 'vue'
+        import { ref, provide, computed } from 'vue'
 
-        const movies = ref([
-            {
-                id: 1,
-                title: 'Super Man',
-                category: `Action`,
-                imageSrc: '../images/10.jpg',
-                isTop: true,
-            },    
-            {
-                id: 2,
-                title: 'Spider Man',
-                category: `Action`,
-                imageSrc: '../images/9.jpg',
-                isTop: true,
-            },
-            {
-                id: 3,
-                title: 'Fast and Furious 9',
-                category: `Action`,
-                imageSrc: '../images/3.jpg',
-                isTop: true,
-            },
-            {
-                id: 4,
-                title: 'Toy Story 4',
-                category: `Cartoon`,
-                imageSrc: '../images/11.jpg',
-                isTop: true,
-            },
-            {
-                id: 5,
-                title: 'Forza Gaming',
-                category: `Racing`,
-                imageSrc: '../images/4.jpeg',
-                isTop: false,
-            },
-            {
-                id: 6,
-                title: 'Wonder Woman',
-                category: `Action`,
-                imageSrc: '../images/12.jpg',
-                isTop: false,
-            },
-            {
-                id: 7,
-                title: 'Mario',
-                category: `Cartoon`,
-                imageSrc: '../images/7.jpg',
-                isTop: false,
-            },
-            {
-                id: 8,
-                title: 'Secret Space',
-                category: `Action`,
-                imageSrc: '../images/8.jpg',
-                isTop: false,
-            },
-            {
-                id: 9,
-                title: 'Wonder Woman',
-                category: `Action`,
-                imageSrc: '../images/13.jpg',
-                isTop: false,
-            },
-            {
-                id: 10,
-                title: 'DC movie',
-                category: `Action`,
-                imageSrc: '../images/14.jpg',
-                isTop: false,
-            },
-            {
-                id: 11,
-                title: 'DC Hero',
-                category: `Action`,
-                imageSrc: '../images/16.jpg',
-                isTop: false,
-            },
-            {
-                id: 12,
-                title: 'KunFu Panda',
-                category: `Cartoon`,
-                imageSrc: '../images/15.jpg',
-                isTop: false,
-            },
-        ])
+        const scrollY = ref(0)
+        window.addEventListener('scroll', ()=>{
+            scrollY.value = window.scrollY
 
-        provide('movies', movies)
+            console.log(scrollY.value)
+        })
+
+        const navBgColor = computed(() => {
+            return scrollY.value > 55 ? 'bg-danger' : 'bg-transparent'
+        })
 
     </script>
   

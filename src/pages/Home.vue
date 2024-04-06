@@ -79,10 +79,11 @@
 </template>
 
 <script setup>
+    import { useMovieStore } from './../store/movie';
+    import { storeToRefs } from 'pinia';
 
-    import { ref, inject } from 'vue';
-
-    const movies = inject('movies')
+    const movieStore = useMovieStore()
+    const {movies} = storeToRefs(movieStore)
 
 </script>
 

@@ -1,13 +1,30 @@
 <template>
     <div
         class="container pt-5">
-        <h5
-            class="mt-5 mb-3">
-            Explore movies
-        </h5>
+        <div>
+            <h5
+                class="mt-5 mb-3">
+                All Movies
+            </h5>
+            <div class="d-flex justify-content-between mb-4">
+                <select 
+                    v-model="category"
+                    @change="filteredByCategory"
+                    class="form-control w-25"
+                    name="" id="">
+                    <option value="all">All</option>
+                    <option value="Action">Action</option>
+                    <option value="Cartoon">Cartoon</option>
+                    <option value="Racing">Racing</option>
+                </select>
+                <input type="text"
+                    class="form-control w-25">
+            </div>
+
+        </div>
         <div class="row g-4">
             <div 
-                v-for="movie in movies" :key="movie.id"
+                v-for="movie in movieList" :key="movie.id"
                 class="col-md-3 my-3">
 
                 <div 
@@ -91,13 +108,31 @@
 </template>
 
 <script setup>
-    import { ref, inject } from 'vue';
     import { useRouter } from 'vue-router';
+    
+    import { useMovieStore } from './../store/movie';
+    import { storeToRefs } from 'pinia';
+    import { ref } from 'vue';
 
+    const movieStore = useMovieStore()
+    const {movies} = storeToRefs(movieStore)
+
+    const movieList = ref(movies.value)
+    // filter 
+    const category = ref('all')
+    const filteredByCategory = () => {
+        if(category.value === 'all') {
+            movieList.value = movies.value
+
+        } else {
+            movieList.value = movies.value.filter((movie) => {
+                return movie.category === category.value
+            })
+        }
+    }
+
+    // go to detail
     const router = useRouter()
-
-    const movies = inject('movies')
-
     const goToDetail = (id) => {
         router.push(`/movie-test-app/movies/${id}`)
     }
