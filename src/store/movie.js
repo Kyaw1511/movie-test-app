@@ -10,6 +10,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/10.jpg',
             isTop: true,
+            stars: 3,
         },    
         {
             id: 2,
@@ -17,6 +18,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/9.jpg',
             isTop: true,
+            stars: 5,
         },
         {
             id: 3,
@@ -24,6 +26,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/3.jpg',
             isTop: true,
+            stars: 3,
         },
         {
             id: 4,
@@ -31,6 +34,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Cartoon`,
             imageSrc: '../images/11.jpg',
             isTop: true,
+            stars: 4,
         },
         {
             id: 5,
@@ -38,6 +42,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Racing`,
             imageSrc: '../images/4.jpeg',
             isTop: false,
+            stars: 2,
         },
         {
             id: 6,
@@ -45,6 +50,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/12.jpg',
             isTop: false,
+            stars: 5,
         },
         {
             id: 7,
@@ -52,6 +58,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Cartoon`,
             imageSrc: '../images/7.jpg',
             isTop: false,
+            stars: 3,
         },
         {
             id: 8,
@@ -59,6 +66,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/8.jpg',
             isTop: false,
+            stars: 2,
         },
         {
             id: 9,
@@ -66,6 +74,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/13.jpg',
             isTop: false,
+            stars: 5,
         },
         {
             id: 10,
@@ -73,6 +82,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/14.jpg',
             isTop: false,
+            stars: 2,
         },
         {
             id: 11,
@@ -80,6 +90,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Action`,
             imageSrc: '../images/16.jpg',
             isTop: false,
+            stars: 2,
         },
         {
             id: 12,
@@ -87,6 +98,7 @@ export const useMovieStore = defineStore('movie', () => {
             category: `Cartoon`,
             imageSrc: '../images/15.jpg',
             isTop: false,
+            stars: 3,
         },
     ])
     
