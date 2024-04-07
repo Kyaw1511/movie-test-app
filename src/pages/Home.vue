@@ -17,7 +17,7 @@
                         class="card card-body bg-success p-0 overflow-hidden">
                         <img
                             :src="`images/${movie.imageSrc}`" 
-                            class="img-fluid rounded-2 p-2 w-100 object-fit-contain" 
+                            class="img-fluid rounded p-2 w-100 object-fit-contain" 
                             style="height: 200px;"
                             alt="test7">
                         <div class="text-center">

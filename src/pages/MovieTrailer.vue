@@ -1,14 +1,15 @@
 <template>
-    <div>
+    <div class="m-2">
         <h4>
-            Movie trailer
+            movie trailer
         </h4>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos perspiciatis qui eligendi asperiores accusamus tenetur modi nemo quam. Vel sequi quod, harum molestias aperiam excepturi officiis dolorem iste quo voluptas officia, omnis nostrum molestiae temporibus dolore, corporis deleniti animi assumenda labore obcaecati quam. Corporis odit quae cum ullam beatae reprehenderit?
+        <p class="">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima inventore dicta fugiat asperiores eos tempora quisquam est laborum at, debitis dolores deserunt cum consequuntur doloribus vero dolorum sint, nemo quaerat voluptatum et, expedita nisi! Nulla, tenetur!
         </p>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos perspiciatis qui eligendi asperiores accusamus tenetur modi nemo quam. Vel sequi quod, harum molestias aperiam excepturi officiis dolorem iste quo voluptas officia, omnis nostrum molestiae temporibus dolore, corporis deleniti animi assumenda labore obcaecati quam. Corporis odit quae cum ullam beatae reprehenderit?
+        <p class="">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima inventore dicta fugiat asperiores eos tempora quisquam est laborum at, debitis dolores deserunt cum consequuntur doloribus vero dolorum sint, nemo quaerat voluptatum et, expedita nisi! Nulla, tenetur!
         </p>
+
     </div>
 </template>
 
@@ -16,6 +17,17 @@
 
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+    div > h4 {
+        margin: 16px auto;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+    }
+    div > p {
+        text-indent: 40px;
+        letter-spacing: 1px;
+        text-align: justify;
+ }
 </style>

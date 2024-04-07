@@ -11,7 +11,7 @@
                 <select 
                     v-model="category"
                     @change="filteredByCategory"
-                    class="form-control w-25"
+                    class="form-control border border-primary w-25"
                     name="" id="">
                     <option value="all">All</option>
                     <option value="Action">Action</option>
@@ -21,7 +21,8 @@
                 <input type="text"
                     v-model="searchInput"
                     @input="filteredByName"
-                    class="form-control w-25">
+                    class="form-control border border-primary w-25"
+                    placeholder="search items">
             </div>
 
         </div>
@@ -31,11 +32,11 @@
                 class="col-md-3 my-3">
 
                 <div 
-                    class="card card-body p-0 overflow-hidden">
+                    class="card card-body bg-success p-0 overflow-hidden">
                     <img
                         :src="`images/${movie.imageSrc}`" 
-                        class="img-fluid rounded-2 py-1 w-100 object-fit-contain" 
-                        style="height: 200px;"
+                        class="img-fluid rounded-lg p-2 w-100 object-fit-contain" 
+                        style="height: 200px; border-radius: 25px;"
                         alt="test7">
                     <div class="my-1">
                         <h3 class="fw-bold fs-4 text-center">
@@ -44,9 +45,7 @@
                         <p class="mx-2 text-start fw-light">
                             {{ movie.category.toUpperCase() }}
                         </p>
-                        <p>
-                            {{ movie.stars }}
-                        </p>
+                        
                         <div class="d-flex justify-content-between">
                             <div 
                                 class="d-flex mx-2 text-start">

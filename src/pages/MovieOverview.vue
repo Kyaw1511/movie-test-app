@@ -1,5 +1,5 @@
 <template>
-    <div class="m-2">
+    <div class="pt-1">
         <h4>
             movie overview
         </h4>

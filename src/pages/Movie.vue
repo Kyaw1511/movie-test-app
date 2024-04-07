@@ -1,6 +1,6 @@
 <template>
     <div 
-        class="container-fluid" id="moviePage">
+        class="container-fluid " id="moviePage">
         <div class="row" >
             <div
                 class="col-md-6 firstRow">
@@ -130,17 +130,29 @@
 </script>
 
 <style scoped>
-    
-    #moviePage img{
+   
+    .firstRow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 85vh;
+        
+    }
+    .firstRow > img{
         /* border: 2px solid green; */
         border-radius: 16px;
         width: 100%;
+        
+    }
+    .secondRow {
+        margin: auto;
+        
     }
     #moviePage p {
         text-indent: 50px;
         text-align: justify;
     }
     #moviePage {
-        min-height: 85vh;
+        min-height: 91vh;
     }
 </style>

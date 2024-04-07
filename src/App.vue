@@ -41,7 +41,7 @@
             <router-view></router-view>
 
             <footer
-                class="p-3">
+                class="p-2">
                 <p
                     class="text-center text-primary">
                     &copy; All right reserved by KMT
@@ -61,25 +61,27 @@
         window.addEventListener('scroll', ()=>{
             scrollY.value = window.scrollY
 
-            console.log(scrollY.value)
-        })
+            // console.log(scrollY.value)
+        });
 
         const navBgColor = computed(() => {
-            return scrollY.value > 55 ? 'bg-danger' : 'bg-transparent'
+            return scrollY.value > 55 ? 'bg-dark' : 'bg-transparent';
+        
         })
 
     </script>
   
     <style scoped>
         
-        #navbar {
-            border: 2px solid whitesmoke;
+        nav {
+            /* border: 2px solid whitesmoke; */
             z-index: 1;
-            
         }
+        
         header {
         height: 100vh;
         }
+        
         header img {
         width: 100%;
         height: 100%;
